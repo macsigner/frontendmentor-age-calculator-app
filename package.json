@@ -1,10 +1,10 @@
 {
     "name": "frontendmentor-age-calculator-app",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "This is a solution to the [Age calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q). Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
     "main": "index.js",
     "scripts": {
-        "start": "webpack serve",
+        "start": "webpack serve --open",
         "build": "webpack --config webpack.prod.js"
     },
     "repository": {
@@ -20,6 +20,7 @@
     },
     "homepage": "https://github.com/macsigner/frontendmentor-age-calculator-app#readme",
     "devDependencies": {
+        "clean-webpack-plugin": "^4.0.0",
         "css-loader": "^6.8.1",
         "html-webpack-plugin": "^5.5.3",
         "merge": "^2.1.1",

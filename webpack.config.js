@@ -11,8 +11,9 @@ export default {
         main: './src/js/main.js'
     },
     output: {
-        filename: '[name].js',
+        filename: '[name]-[hash].js',
         path: __dirname + '/dist',
+        assetModuleFilename: '[name]-[hash][ext]',
     },
     module: {
         rules: [
@@ -35,11 +36,17 @@ export default {
                         },
                     },
                 ],
+            },
+            {
+                test: /\.(png|jpe?g|gif|ico)$/,
+                type: 'asset/resource'
             }
         ]
     },
     plugins: [
-        new MiniCssExtractPlugin(),
+        new MiniCssExtractPlugin({
+            filename: "[name]-[hash].css",
+        }),
         new HtmlWebpackPlugin({
             template: 'src/pages/index.html'
         }),
