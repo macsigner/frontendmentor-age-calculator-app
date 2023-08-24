@@ -5,24 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- displays site properly based on user's device -->
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<%= require('../assets/images/favicon-32x32.png') %>">
 
     <title>Frontend Mentor | Age calculator app</title>
 </head>
 <body>
-<img src="<%= require('../assets/images/icon-arrow.svg') %>" alt="" width="46" height="44">
-Day
-DD
+<main>
+    <form>
+        <label>
+            Day
+            <input type="number" name="day" placeholder="DD">
+            <small>Must be a valid day</small>
+        </label>
+        <label>
+            Month
+            <input type="number" name="month" placeholder="MM">
+            <small>Must be a valid month</small>
+        </label>
+        <label>
+            Year
+            <input type="number" name="year" placeholder="YYYY">
+            <small>Must be a valid Year</small>
+        </label>
 
-Month
-MM
+        <button>
+            <img src="<%= require('../assets/images/icon-arrow.svg') %>" alt="submit" width="46" height="44">
+        </button>
 
-Year
-YYYY
-
--- years
--- months
--- days
-
+        <fieldset id="result">
+            <label><input type="number" name="resultYears" placeholder="––"> years</label>
+            <label><input type="number" name="resultMonths" placeholder="––"> months</label>
+            <label><input type="number" name="resultDays" placeholder="––"> days</label>
+        </fieldset>
+    </form>
+</main>
 </body>
 </html>
