@@ -38,8 +38,11 @@ export default {
                 ],
             },
             {
-                test: /\.(png|jpe?g|gif|ico)$/,
-                type: 'asset/resource'
+                test: /\.(png|jpe?g|gif|ico|svg)$/,
+                type: 'asset/resource',
+                generator: {
+                    outputPath: 'assets/images/'
+                }
             }
         ]
     },
