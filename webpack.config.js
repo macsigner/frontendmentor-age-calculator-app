@@ -41,7 +41,8 @@ export default {
                 test: /\.(png|jpe?g|gif|ico|svg)$/,
                 type: 'asset/resource',
                 generator: {
-                    outputPath: 'assets/images/'
+                    outputPath: 'assets/images/',
+                    publicPath: 'assets/images/',
                 }
             }
         ]
