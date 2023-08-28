@@ -1,0 +1,13 @@
+:root {
+    --side-margin: 2rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+main {
+    width: calc(100% - var(--side-margin) * 2);
+    max-width: 800px;
+    margin: 0 auto;
+}
