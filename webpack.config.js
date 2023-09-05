@@ -15,6 +15,9 @@ export default {
         path: __dirname + '/dist',
         assetModuleFilename: '[name]-[hash][ext]',
     },
+    devServer: {
+        hot: true,
+    },
     module: {
         rules: [
             {
