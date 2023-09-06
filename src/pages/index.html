@@ -12,21 +12,37 @@
 <body>
 <main>
     <form>
-        <label>
-            Day
-            <input type="number" name="day" placeholder="DD">
-            <small>Must be a valid day</small>
-        </label>
-        <label>
-            Month
-            <input type="number" name="month" placeholder="MM">
-            <small>Must be a valid month</small>
-        </label>
-        <label>
-            Year
-            <input type="number" name="year" placeholder="YYYY">
-            <small>Must be a valid Year</small>
-        </label>
+        <div class="input">
+            <label for="input-day" class="input__label">Day</label>
+            <input type="number"
+                   name="day"
+                   id="input-day"
+                   placeholder="DD"
+                   min="1"
+                   max="31"
+                   class="input__field">
+            <small class="input__info">Must be a valid day</small>
+        </div>
+        <div class="input">
+            <label for="input-month" class="input__label">Month</label>
+            <input type="number"
+                   name="month"
+                   id="input-month"
+                   placeholder="MM"
+                   min="1"
+                   max="12"
+                   class="input__field">
+            <small class="input__info">Must be a valid month</small>
+        </div>
+        <div class="input">
+            <label for="input-year" class="input__label">Year</label>
+            <input type="number"
+                   name="year"
+                   id="input-year"
+                   placeholder="YYYY"
+                   class="input__field">
+            <small class="input__info">Must be a valid Year</small>
+        </div>
 
         <button class="submit-button">
             <img src="<%= require('../assets/images/icon-arrow.svg') %>" alt="submit" width="46" height="44">

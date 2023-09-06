@@ -15,9 +15,6 @@ export default {
         path: __dirname + '/dist',
         assetModuleFilename: '[name]-[hash][ext]',
     },
-    devServer: {
-        hot: true,
-    },
     module: {
         rules: [
             {
@@ -51,11 +48,9 @@ export default {
         ]
     },
     plugins: [
-        new MiniCssExtractPlugin({
-            filename: "[name]-[hash].css",
-        }),
+        new MiniCssExtractPlugin(),
         new HtmlWebpackPlugin({
-            template: 'src/pages/index.html'
+            template: 'src/pages/index.html',
         }),
     ]
 }

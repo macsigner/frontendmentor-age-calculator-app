@@ -1,0 +1,59 @@
+/**
+ * input bem module
+ */
+@use 'sass:math';
+
+.input {
+    &__label,
+    &__field,
+    &__info {
+        display: block;
+        margin-bottom: .8rem;
+    }
+
+    &__label {
+        font-family: Poppins;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: math.div(3.5em, 14);
+        text-transform: uppercase;
+    }
+
+    &__field {
+        width: 100%;
+        padding: 1.2rem 1.4rem;
+        border: 1px solid var(--color-state, var(--color-light-grey));
+        border-radius: .8rem;
+        font-family: Poppins;
+        font-size: 3.2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: math.div(.32em, 32);
+        outline: none;
+    }
+
+    &__field::placeholder {
+        color: var(--color-off-black);
+        opacity: .5;
+    }
+
+    &__field:focus {
+        border-color: var(--border-color-focus, var(--color-primary));
+    }
+
+    &__info {
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: normal;
+        color: var(--color-state);
+    }
+
+    &--error {
+        --color-state: var(--color-alert);
+    }
+}
